@@ -73,20 +73,15 @@ a.active,a:hover{
 #check{
     display:none;
 }
-@media(max-width:952px){
-    label.logo{
-        font-size: 30px;
-        padding-left: 50px;
-
-    }
-    nav ul li a{
-        font-size: 16px;
-    }
-}
 @media(max-width:858px){
     .checkbtn{
         display: block;
     }
+
+    nav ul li a{
+        font-size: 16px;
+    }
+
     ul{
         position:fixed;
         width:100%;
@@ -114,3 +109,45 @@ a.active,a:hover{
         left:0;
     }
 }
+
+.container{
+    position: relative;
+    display:flex ;
+    justify-content:center ;
+    align-items: center;
+    width:100%;
+    height: 100%;
+    padding: 20px 100px;
+}
+.container::after{
+    content:'';
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+}
+.content-box{
+   max-width: 850px;
+   display: grid; 
+   grid-template-columns: repeat(2, 1fr );
+   justify-content: center;
+   text-align: center;
+}
+.left{
+height: 100%;
+}
+right{
+    padding:25px, 40px;
+}
+.btn{
+width:100%;
+padding: 0.5rem 1rem;
+font-size: 1.1 rem;
+
+}
+@media(max-width:952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
